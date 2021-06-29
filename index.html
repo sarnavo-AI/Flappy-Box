@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>Flappy Bird Game</title>
+    </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet'>
+    <link type="text/css" rel="stylesheet" href="flappyBird.css" />
+    <body>
+        <div id="main-container">
+            <div id="start-container">
+                <h2>Flappy Box</h2>
+                <button id="start-button">START</button>
+                <button class="setting-button">Settings</button>
+                <p id="info-para">Press space bar to move the bird</p>
+                <!-- <p id="copyright">&copy; SARNAVO SARKAR PRODUCTON</p>  -->
+            </div>
+
+            <div id="game-container">
+                <img src="Cloud_1.png" id="left-cloud" width="120px" height="auto"/>
+                <img src="Cloud_1.png" id="right-cloud" width="120px" height="auto"/>
+                <img src="background.png" id="background" width="800px" height="450px"/>
+                
+                <button id="pause-button">Pause</button>
+                <div id="game-score">
+                    <p id="game-para-score">Score: <span id="game-span-score">0</span></p>
+                </div>
+                <canvas></canvas>
+            </div>
+
+            <div id="pause-container">
+                <div id="pause-option" class="option">
+                    <h3>Paused!</h3>
+                    <p class="option-score">Score: <span class="box-span-score">0</span></p>
+                    <ul>
+                        <li><button id="resume-button">Resume</button></li>
+                        <li><button class="setting-button">Settings</button></li>
+                        <li><button class="reset-button">Reset</button></li>
+                        <li><button class="quit-button">Quit</button></li>
+                    </ul>
+                    
+                </div>
+            </div>
+
+            <div id="setting-container">
+                <div id="setting-option" class="option">
+                    <h3>Setting!</h3>
+                    <div class="setting-tab">
+                        <ul class="tabs">
+                            <li class="tab-link active-tab" data-tab="bird-tab">Box</li>
+                            <li class="tab-link" data-tab="obstrucle-tab">Obstrucle</li>
+                            <!-- <li class="tab-link" data-tab="tab-3">Obstrucle</li> -->
+                            <!-- <li class="tab-link" data-tab="tab-4">Tab Four</li> -->
+                        </ul>          
+                        <div id="bird-tab" class="tab-content active-tab">
+                            <ul class="bird-list setting-list">
+                                <li>
+                                    <label for="bird-color">Color: </label>
+                                    <input id="bird-color" type="color" value="#F23838">
+                                </li>
+                                <li>
+                                    <label for="bird-height">Height: </label>
+                                    <input id="bird-height" type="number" value=5 step=1>
+                                </li>
+                                <li>
+                                    <label for="bird-width">Width: </label>
+                                    <input id="bird-width" type="number" value=5 step=1>
+                                </li>
+                                <li>
+                                    <label for="bird-gravity">Gravity: </label>
+                                    <input id="bird-gravity" type="number" value=1 step=1>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="obstrucle-tab" class="tab-content">
+                            <ul class="obstrucle-list setting-list">
+                                <li>
+                                    <label for="obstrucle-color">Color: </label>
+                                    <input id="obstrucle-color" type="color" value="#07D977">
+                                </li>
+                                <li>
+                                    <label for="obstrucle-width">Width: </label>
+                                    <input id="obstrucle-width" type="number" value=9 step=1>
+                                </li>
+                                <li>
+                                    <label for="obstrucle-speed">Speed: </label>
+                                    <input id="obstrucle-speed" type="number" value=2 step=0.5>
+                                </li>
+                                <li>
+                                    <label for="obstrucle-frequency">Frequency: </label>
+                                    <input id="obstrucle-frequency" type="number" value=1 step=1>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- <div id="tab-3" class="tab-content">
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        </div> -->
+                        <!-- <div id="tab-4" class="tab-content">
+                            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div> -->
+                    
+                    </div>
+                    <button id="setting-done-button">Done!</button>
+                </div>
+            </div>
+
+            <div id="lost-container">
+                <div id="lost-option" class="option">
+                    <h3>You Lost!</h3>
+                    <p class="option-score">Score: <span class="box-span-score">0</span></p>
+                    <ul>
+                        <li><button class="reset-button">Reset</button></li>
+                        <li><button class="quit-button">Quit</button></li>
+                    </ul>             
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="flappyBird.js"></script>
+    </body>
+</html>
