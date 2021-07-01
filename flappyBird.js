@@ -164,9 +164,11 @@ $(document).ready(function () {
         }
     });
 
-    $('canvas').click(function() {
-        bird.y -= keyMove; 
-        vel = 0; 
+    $('body').click(function() {
+        if(typeof bird != 'undefined') {
+            bird.y -= keyMove; 
+            vel = 0; 
+        }
     });
 
     function blinker() {
