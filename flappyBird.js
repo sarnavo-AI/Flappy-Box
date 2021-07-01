@@ -162,7 +162,12 @@ $(document).ready(function () {
             bird.y -= keyMove; 
             vel = 0; 
         }
-    })
+    });
+
+    $('canvas').click(function() {
+        bird.y -= keyMove; 
+        vel = 0; 
+    });
 
     function blinker() {
         $('#info-para').fadeOut(500);
